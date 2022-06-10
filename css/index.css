@@ -20,7 +20,7 @@
 		position: relative;
 		width: 96%;
 		height: fit-content;
-		background: url("images/fondoBienvenida.svg") no-repeat;
+		background: url("/images/fondoBienvenida.svg") no-repeat;
 		background-size: cover;
 		padding: 2%;
 		margin: 2%;
