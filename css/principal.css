@@ -1,0 +1,395 @@
+/****Estilos elementos fijos (navbar,buscador,logo)****/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color:#ffbd59 #131313;
+}
+:root{
+    --colorNaranja:#ffbd59;
+    --colorBlanco:#ebeef0;
+    --colorNegro:#131313;
+    --colorGris:#282828;
+}
+body{
+    background: var(--colorNegro);
+    transition: background 0.8s;
+    overflow-x: hidden;
+}
+body.light{
+    background:var(--colorBlanco) ;
+}
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 1.5vh;
+    top: 0;
+    left: 7%;
+    width: calc(100% - 7%);
+    z-index: 5;
+}
+header div.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+}
+header div.logo img{
+    width: 100%;
+}
+/*lateral buscador*/
+aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 50vw;
+    padding: 10px;
+}
+.switch{
+    background:var(--colorGris);
+    border-radius:100px;
+    border:none;
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+    outline:none;
+}
+.switch::after{
+    content:"";
+    display:block;
+    width:30px;
+    height:30px;
+    position:absolute;
+    background:#F1F1F1;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius:100px;
+    transition:.3s ease all;
+    box-shadow:0px 0px 2px 2px rgba(0,0,0,.2);
+}
+.switch span{
+    width:30px;
+    height:30px;
+    line-height:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:none;
+    color:#fff;
+}
+.switch span ion-icon{
+    font-size: 1.3em;
+}
+.switch.active{
+    background: var(--colorNaranja);
+    color: var(--colorNegro);
+}
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+/*buscador*/
+form#buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 100%;
+    padding-left: 1vw;
+}
+form input#buscador{
+    width: 80%;
+    height: 100%;
+    padding-left: 7px;
+    border: none;
+    outline: none;
+    background: var(--colorBlanco);
+    color: var(--colorNegro);
+    transition: background 2s;
+    -webkit-box-shadow: 3px 3px 0px 0px #282828;
+    box-shadow: 3px 3px 0px 0px #282828;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+button#btn_buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5vw;
+    height: 100%;
+    font-size: 1.4em;
+    background: var(--colorNaranja);
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 3px 0px 0px #282828;
+    box-shadow: 3px 3px 0px 0px #282828;
+}
+#btn_buscar ion-icon{
+    width: 40px;
+    height: 40px;
+    padding: 25%;
+}
+div.carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+div.carrito ion-icon{
+    width: 40px;
+    height:7vh;
+    border-radius: 50%;
+    color: var(--colorBlanco);
+    padding-top: 5px;
+    transition: color 2s;
+}
+body.light div.carrito ion-icon{
+    color: var(--colorNegro);
+}
+div.sesion{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    position: relative;
+    gap: 2vw;
+    width: 25vw;
+    height: 100%;
+}
+.sesion button#log-in{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    margin: 0 0.8vw;
+    font-weight: 600;
+    font-size: 100%;
+}
+div.sesion ion-icon,
+div.sesion img{
+    width: 45px;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -3;
+}
+div.sesion img{
+    position: absolute;
+    top: 0px;
+    border-radius: 50%;
+    z-index: 3;
+}
+nav{
+    min-height: 100vh;
+    z-index: 10;
+    position: fixed ;
+    top: 0px;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width:70px ;
+    background: var(--colorNegro);
+    box-shadow: 1vh 0 0 var(--colorNaranja);
+    border-left: 1px solid var(--colorNegro);
+    overflow-x: hidden;
+    transition: width 0.5s;
+}
+.navigation.menuDesplegado{
+    width: 230px;
+}
+.navigation ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left:5px;
+    padding-top: 25px;
+    gap: 1vh;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px ;
+}
+.navigation ul li.active{
+    background: var(--colorNaranja);
+}
+.navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffff;
+}
+.navigation ul li a:hover{
+    color: var(--colorNaranja);
+}
+.navigation ul li.active a::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 var(--colorNaranja);
+}
+.navigation ul li.active a::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 var(--colorNaranja);
+}
+.navigation ul li.active a{
+    background: var(--colorNaranja);
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    color: #131313;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.navigation li.menu{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    z-index: 999;
+    height: 60px;
+    border-radius: 50%;
+}
+.navigation li.menu:hover{
+    cursor: pointer;
+}
+.navigation li.menu ion-icon{
+    transition: transform 0.7s;
+    background-color: var(--colorGris);
+    border-radius: 50%;
+    padding: 5px;
+}
+.navigation li.menu.desplegar ion-icon{
+    color: #ffbd59;
+    transform: rotate(180deg);
+	transition: transform 0.7s;
+}
+.navigation li.menu:hover ion-icon{
+    color: #ffbd59;
+}
+/**footer**/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px ;
+    position: relative;
+    left: 6%;
+    width: calc(100% - 6%);
+    height: max-content;
+    justify-self: flex-end ;
+    align-self: flex-end;
+    color: #ebeef0 ;
+    background: var(--colorNegro);
+}
+body.light footer{
+    background: var(--colorBlanco);
+    color: var(--colorGris);
+}
+footer ul.menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 30%;
+}
+footer ul.menu.uno li{
+    width: 100%;
+    list-style: none;
+    padding-bottom: 10px;
+    text-align: justify;
+    transition: color 2s ;
+}
+footer ul.menu.uno li:hover{
+    color: var(--colorNaranja);
+}
+footer ul.menu h2,li#subtitulo{
+    color: var(--colorNaranja);
+    width: 100%;
+}
+
+/*mobile*/
+@media (max-width:900px) {
+    header{
+        justify-content: center;
+        left: 0;
+        width:100%;
+    }
+    header div.logo {
+        margin-bottom: 3vh;
+    }
+    .navigation{
+        width: 0px;
+    }
+    aside{
+        padding: 0 20px;
+        width: 100vw;
+        height: 7vh;
+    }
+    button#btn_buscar{
+        width: 5vw;
+    }
+}
+/**Color barra scroll chrome**/
+::-webkit-scrollbar{
+    background-color: var(--colorNegro);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--colorNaranja);
+    border-radius: 5px;
+}

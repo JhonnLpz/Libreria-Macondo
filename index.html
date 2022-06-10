@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--estilos base :barra navegacion, logo, buscador, footer, modo oscuro;-->
+    <link rel="stylesheet" href="css/principal.css">
+    <!--estilos seccion de index-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/logosEtc/MacondoFavicon.png" type="image/x-icon">
+    <title>Inicio | Macondo</title>
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <ul class="navbar__menu">
+                <li class="list active">
+                    <a href="./index.html">
+                        <span class="icon"><ion-icon name="home-sharp"></ion-icon></span>
+                        <span class="title">Inicio</span>
+                    </a>
+                </li>
+                <!--menu lateral-->
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="library-sharp"></ion-icon></span>
+                        <span class="title">Libros</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="phone-portrait"></ion-icon></span>
+                        <span class="title">Ebooks</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="copy"></ion-icon></span>
+                        <span class="title">Categorias</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="pricetags"></ion-icon></span>
+                        <span class="title">Promociones</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                        <span class="title">Lista de deseos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                        <span class="title">Log out</span>
+                    </a>
+                </li>
+                <li class="menu">
+                    <a>
+                        <span class="icon"><ion-icon name="menu"></ion-icon></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="logo">
+            <img src="images/logosEtc/MacondoLogo.png" alt="Logo Macondo" id="Logo_macondo">
+        </div>
+    <aside>
+        <!--*tema claro y oscuro*-->
+        <div class="switch_container">
+            <button class="switch"id="switch">
+                <span><ion-icon name="flash"></ion-icon></span>
+                <span><ion-icon name="moon"></ion-icon></span>
+            </button>
+        </div>
+        <!--*buscador de libros*-->
+        <form action="" method="post" id="buscar">
+            <input id="buscador" type="search" name="buscar" id="buscador" placeholder="Busca aqui tu libro">
+            <button type="submit" id="btn_buscar"><ion-icon name="search"></ion-icon></button>
+        </form>
+        <!--carrito perfil usuario y registro-->
+        <div class="carrito">
+            <a href="">
+                <ion-icon name="cart"></ion-icon>
+            </a>
+        </div>
+        <div class="sesion">
+            <a href="#">
+                <button class="ver_mas" id="log-in">Log in</button>
+            </a>
+            <a href="#">
+                <img src="images/userProfile.jpg" alt="profile">
+                <ion-icon name="person"></ion-icon>
+            </a>
+        </div>
+    </aside>
+    </header>
+    <!--*logo principal*-->
+    <!--contenido principal-->
+    <section class="bienvenida">
+        <!--slider-->
+        <div class="initial-title">
+            <h2>Bienvenido <p id="title2">a Macondo</p></h2>
+            <h3>Donde las historias cobran vida</h3>
+            <img id="mariposa" src="images/mariposaAmarilla.gif" alt="">
+            <img id="lectura" src="images/lectura.svg" alt="">
+        </div>
+    </section>
+    <section class="first-section">
+        <div class="redes">
+            <span><ion-icon name="logo-facebook"></ion-icon></span>
+            <span><ion-icon name="logo-whatsapp"></ion-icon></span>
+            <span><ion-icon name="logo-instagram"></ion-icon></span>
+            <span><ion-icon name="mail"></ion-icon></span>
+        </div>
+
+        <div class="container-slider">
+            <div class="slider-content">
+                <div class="container-image">
+                    <img src="images/banner1.jpg" alt="">
+                </div>
+                <div class="container-image">
+                    <img src="images/banner2.jpg" alt="">
+                </div>
+                <div class="container-image">
+                    <img src="images/banner3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!--listado Libros mas vendidos-->
+        <div class="topLibros">
+            <h2>Libros mas vendidos</h2>
+            <ul class="topListado">
+                <li class="libro 1">
+                    <div class="sinopsisMostrar">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title"><p>Cien años de soledad - Gabriel G. Marquez</p></span>
+                        <span class="icon" id="btn_mostrar"><ion-icon name="caret-down"></ion-icon></span>
+                        <span class="sinopsis">
+                            <p class="descripcion">
+                                Muchos años después, frente al pelotón de fusilamiento,el coronel Aureliano
+                                Buendía había de recordar aquella tarde
+                                remota en que su padre lo llevó a conocer el hielo
+                            </p>
+                            <button class="ver_mas">Ver más</button>
+                        </span>
+                    </div>
+                </li>
+                <li class="libro 2">
+                    <div class="sinopsisMostrar">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title"><p>Cronica de una muerte anunciada - Gabriel G. Marquez</p></span>
+                        <span class="icon" id="btn_mostrar"><ion-icon name="caret-down"></ion-icon></span>
+                        <span class="sinopsis">
+                            <p class="descripcion">
+                                Crónica de una muerte anunciada relata la historia del asesinato de Santiago Nasar,
+                                un joven de 21 años,con ascendencia árabe y católico,quien gobernaba...
+                            </p>
+                            <button class="ver_mas">Ver más</button>
+                        </span>
+                    </div>
+                </li><li class="libro 3">
+                    <div class="sinopsisMostrar">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title"><p>Scorpio city - Mario Mendoza</p></span>
+                        <span class="icon" id="btn_mostrar"><ion-icon name="caret-down"></ion-icon></span>
+                        <span class="sinopsis">
+                            <p class="descripcion">
+                                Un inspector, crímenes, religiosos medievales camuflados
+                                en busca del poder, vagabundos y nómadas prehistóricos
+                                que viven de los deshechos...
+                            </p>
+                            <button class="ver_mas">Ver más</button>
+                        </span>
+                    </div>
+                </li><li class="libro 4">
+                    <div class="sinopsisMostrar">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title"><p>Satanas - Mario Mendoza</p> </span>
+                        <span class="icon" id="btn_mostrar"><ion-icon name="caret-down"></ion-icon></span>
+                        <span class="sinopsis">
+                            <p class="descripcion">
+                                Muchos años después, frente al pelotón de fusilamiento,el coronel Aureliano
+                                Buendía había de recordar aquella tarde
+                                remota en que su padre lo llevó a conocer el hielo
+                            </p>
+                            <button class="ver_mas">Ver más</button>
+                        </span>
+                    </div>
+                </li><li class="libro 5">
+                    <div class="sinopsisMostrar">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title"><p>12 cuentos peregrinos - Gabriel G. Marquez</p> </span>
+                        <span class="icon" id="btn_mostrar"><ion-icon name="caret-down"></ion-icon></span>
+                        <span class="sinopsis">
+                            <p class="descripcion">
+                                Muchos años después, frente al pelotón de fusilamiento,el coronel Aureliano
+                                Buendía había de recordar aquella tarde
+                                remota en que su padre lo llevó a conocer el hielo
+                            </p>
+                            <button class="ver_mas">Ver más</button>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="second-section">
+        <!--segunda seccion novedades libros-->
+        <div class="novedades encabezado">
+            <div class="tituloNovedades">
+                <span class="lineaTitulos"></span>
+                <h2>Novedades</h2>
+                <span class="lineaTitulos"></span>
+            </div>
+        </div>
+        <div class="novedades container">
+            <div class="container_libro">
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$30.000</button>
+                    <img class="img_card" src="images/portadas/cienAñosSoledad.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Cien años de soledad</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$50.000</button>
+                    <img class="img_card" src="images/portadas/cronica.jpg" alt="libro1">
+                    <div class="card_content">
+                        <p>Cronica de una muerte anunciada</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$40.000</button>
+                    <img class="img_card" src="images/portadas/scorpio.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Scorpio City</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$60.000</button>
+                    <img class="img_card" src="images/portadas/satanas.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Satanás</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$30.000</button>
+                    <img class="img_card" src="images/portadas/harry.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Harry Potter y el caliz de fuego</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$50.000</button>
+                    <img class="img_card" src="images/portadas/doceCuentosP.png" alt="libro1">
+                    <div class="card_content">
+                        <p>12 cuentos peregrinos</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$60.000</button>
+                    <img class="img_card" src="images/portadas/ojosDePerro.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Ojos de Perro Azul</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$30.000</button>
+                    <img class="img_card" src="images/portadas/juegosDelHambre.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Los Juegos Del Hambre</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$30.000</button>
+                    <img class="img_card" src="images/portadas/frankestein.png" alt="libro1">
+                    <div class="card_content">
+
+                        <p>Frankestein</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$60.000</button>
+                    <img class="img_card" src="images/portadas/1984GO.png" alt="libro1">
+                    <div class="card_content">
+                        <p>1984</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$50.000</button>
+                    <img class="img_card" src="images/portadas/señorAnillos.png" alt="libro1">
+                    <div class="card_content">
+                        <p>Señor de los anillos III: El retorno del Rey</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+                <div class="card_libro">
+                    <button class="ver_mas" id="precio">$30.000</button>
+                    <img class="img_card" src="images/portadas/replandorSK.png" alt="libro1">
+                    <div class="card_content">
+                        <p>El resplandor</p>
+                        <button class="ver_mas" id="agregar_Carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="novedades encabezado recomendados">
+            <div class="tituloNovedades">
+                <span class="lineaTitulos"></span>
+                <h2>Recomendados</h2>
+                <span class="lineaTitulos"></span>
+            </div>
+        </div>
+    </section>
+<footer>
+    <ul class="menu uno">
+        <h2>Menú</h2>
+        <li>inicio</li>
+        <li>Libros</li>
+        <li>Ebooks</li>
+        <li>Categorias</li>
+        <li>Promociones</li>
+    </ul>
+    <ul class="menu uno">
+        <h2>Información</h2>
+        <li>Creado por: Jhon Lopez</li>
+        <h2>Horario Atención</h2>
+        <li>Lunes a viernes</li>
+        <li>8 am a 6pm</li>
+        <li>Mosquera- Cundinamarca</li>
+    </ul>
+    <ul class="menu uno">
+        <h2>Redes Sociales</h2>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>Facebook</li>
+        <li>WhatsApp</li>
+        <li>correo@macondoLibros.com</li>
+    </ul>
+</footer>
+
+    <!--script iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/principal.js"></script>
+</body>
+</html>
