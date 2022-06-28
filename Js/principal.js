@@ -7,7 +7,12 @@ const btnSwitch = document.querySelector("#switch");
 let menuDesplegar = document.querySelector(".menu");
 let menuContenedor = document.querySelector(".navigation");
 
+// loader
+window.onload = () => {
+    let contenedor = document.querySelector(".loader_container");
 
+    contenedor.style.display = "none";
+}
 function activeLink() {
     list.forEach((item) =>
         item.classList.remove("active"));
