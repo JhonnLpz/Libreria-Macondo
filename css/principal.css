@@ -14,7 +14,7 @@
     --colorNegro:#131313;
     --colorGris:#282828;
 }
-body{
+body,body.dark{
     background: var(--colorNegro);
     transition: background 0.8s;
     overflow-x: hidden;
